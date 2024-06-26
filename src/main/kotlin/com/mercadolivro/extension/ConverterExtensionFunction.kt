@@ -12,7 +12,7 @@ import com.mercadolivro.models.CustomerModel
 import com.mercadolivro.enums.BookStatus as BookStatus1
 
 fun PostCustomerRequest.toCustomerModel() : CustomerModel {
-    return CustomerModel(name = this.name, email = this.email, status = CustomerStatus.ATIVO)
+    return CustomerModel(name = this.name, email = this.email, status = CustomerStatus.ACTIVE)
 }
 
 fun PutCustomerRequest.toCustomerModel(previousValue: CustomerModel): CustomerModel {
@@ -28,7 +28,7 @@ fun PostBookRequest.toBookModel(customer: CustomerModel): BookModel {
     return BookModel(
         name = this.name,
         price = this.price,
-        status = BookStatus1.ATIVO,
+        status = BookStatus1.ACTIVE,
         customer = customer
     )
 }
