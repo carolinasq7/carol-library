@@ -14,3 +14,7 @@ spring:
       baseline-on-migrate: true
   jackson:
     default-property-inclusion: non_null
+
+jwt:
+  secret: 9a9f7783-0257-4f24-978b-a1a0e42db346
+  expiration: 9999999

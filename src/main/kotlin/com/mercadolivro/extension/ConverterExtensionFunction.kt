@@ -12,14 +12,19 @@ import com.mercadolivro.models.CustomerModel
 import com.mercadolivro.enums.BookStatus as BookStatus1
 
 fun PostCustomerRequest.toCustomerModel() : CustomerModel {
-    return CustomerModel(name = this.name, email = this.email, status = CustomerStatus.ACTIVE)
+    return CustomerModel(
+        name = this.name,
+        email = this.email,
+        status = CustomerStatus.ACTIVE,
+        password = this.password)
 }
 
 fun PutCustomerRequest.toCustomerModel(previousValue: CustomerModel): CustomerModel {
     return CustomerModel(id = previousValue.id,
         name = this.name,
         email = this.email,
-        status = previousValue.status
+        status = previousValue.status,
+        password = previousValue.password
     )
 
 }

@@ -10,6 +10,9 @@ data class PostCustomerRequest (
 
         @field:Email
         @EmailAvailable
-        var email: String
+        var email: String,
+
+        @field:NotEmpty
+        var password: String
     )
 
