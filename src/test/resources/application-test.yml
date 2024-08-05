@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/carollibrarytest?createDatabaseIfNotExist=true
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  flyway:
+      baseline-on-migrate: true
+  jackson:
+    default-property-inclusion: non_null
+jwt:
+  secret: 9a9f7783-0257-4f24-978b-a1a0e42db346
+  expiration: 9999999

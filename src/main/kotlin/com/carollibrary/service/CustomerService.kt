@@ -18,7 +18,7 @@ class CustomerService(
     private val bCrypt: BCryptPasswordEncoder
 
 ) {
-     fun getAllCustomers(name: String?, pageable: Pageable): Page<CustomerModel> {
+     fun getAllCustomers(name: String?, pageable: Pageable): Iterable<CustomerModel> {
         name?.let {
             return customerRepository.findByNameContaining(it, pageable)
         }
@@ -39,7 +39,7 @@ class CustomerService(
 
     fun update(customer: CustomerModel) {
         if(!customerRepository.existsById(customer.id!!)){
-            throw Exception()
+            throw NotFoundException(Errors.ML201.message.format(customer.id), Errors.ML201.code)
         }
         customerRepository.save(customer)
         }

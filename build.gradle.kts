@@ -8,6 +8,7 @@ plugins {
 	kotlin("plugin.spring") version "1.9.24"
 	kotlin("plugin.noarg") version "1.9.24"
 	kotlin("plugin.jpa") version "1.9.24"
+	jacoco
 }
 
 group = "com.mercadolivro"
@@ -37,9 +38,14 @@ dependencies {
 	implementation("io.jsonwebtoken:jjwt-api:0.11.5")
 	implementation("io.jsonwebtoken:jjwt-impl:0.11.5")
 	implementation("io.jsonwebtoken:jjwt-jackson:0.11.5")
+
 	runtimeOnly("com.mysql:mysql-connector-j")
 	runtimeOnly("mysql:mysql-connector-java:8.0.33")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("io.mockk:mockk:1.13.12")
+	testImplementation("org.springframework.security:spring-security-test:6.3.1")
+
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 

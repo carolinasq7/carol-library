@@ -8,7 +8,6 @@ import com.carollibrary.extension.toCustomerResponse
 import com.carollibrary.security.UserCanOnlyAccessTheirOwnResource
 import com.carollibrary.service.CustomerService
 import jakarta.validation.Valid
-import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.data.web.PageableDefault
 import org.springframework.http.HttpStatus
@@ -21,7 +20,7 @@ class CustomerController(
 ) {
     @GetMapping
     @UserCanOnlyAccessTheirOwnResource
-    fun getAllCustomers(@RequestParam name: String?, @PageableDefault(page = 0, size = 10) pageable: Pageable): Page<CustomerResponse> {
+    fun getAllCustomers(@RequestParam name: String?, @PageableDefault(page = 0, size = 10) pageable: Pageable): List<CustomerResponse> {
          return customerService.getAllCustomers(name, pageable).map { it.toCustomerResponse() }
     }
 
