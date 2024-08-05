@@ -26,8 +26,6 @@ Este projeto foi criado com o intuito de aprender e praticar Kotlin. Durante o d
 
 - [Kotlin](https://kotlinlang.org/)
 - [Spring Boot](https://spring.io/projects/spring-boot)
-- [Hibernate](https://hibernate.org/)
-- [H2 Database](https://www.h2database.com/)
 - [JUnit](https://junit.org/junit5/)
 - [MockK](https://mockk.io/)
 
