@@ -11,7 +11,7 @@ plugins {
 	jacoco
 }
 
-group = "com.mercadolivro"
+group = "com.carol-library"
 version = "0.0.1-SNAPSHOT"
 
 java {

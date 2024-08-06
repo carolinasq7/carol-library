@@ -6,8 +6,8 @@ import org.springframework.scheduling.annotation.EnableAsync
 
 @EnableAsync
 @SpringBootApplication
-class MercadoLivroApplication
+class CarolLibraryApplication
 
 fun main(args: Array<String>) {
-	runApplication<MercadoLivroApplication>(*args)
+	runApplication<CarolLibraryApplication>(*args)
 }
